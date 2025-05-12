@@ -3,7 +3,7 @@ package org.example.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.UserRole;
+import org.example.util.UserRole;
 
 import java.time.LocalDateTime;
 @Data
