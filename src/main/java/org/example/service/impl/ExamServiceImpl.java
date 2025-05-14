@@ -1,7 +1,9 @@
 package org.example.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.dto.Exam;
+import org.example.repository.ExamRepository;
 import org.example.service.ExamService;
 import org.springframework.stereotype.Service;
 
@@ -9,10 +11,14 @@ import java.util.List;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class ExamServiceImpl implements ExamService {
+
+    final ExamRepository repository;
+
     @Override
     public void createExam(Exam exam) {
-    log.info(exam.toString());
+    //repository.save()
     }
 
     @Override
