@@ -1,14 +1,18 @@
 package org.example.service.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.dto.Exam;
 import org.example.service.ExamService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class ExamServiceimpl implements ExamService {
+@Service
+@Slf4j
+public class ExamServiceImpl implements ExamService {
     @Override
     public void createExam(Exam exam) {
-
+    log.info(exam.toString());
     }
 
     @Override
