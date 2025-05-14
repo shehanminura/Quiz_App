@@ -4,10 +4,9 @@ import lombok.RequiredArgsConstructor;
 import org.example.dto.Exam;
 import org.example.service.ExamService;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.swing.*;
 
 @RestController
 @RequestMapping("/exam")
@@ -23,5 +22,10 @@ public class ExamController {
     @PostMapping("/create-exam")
     public void createExam(@RequestBody Exam exam){
             service.createExam(exam);
+    }
+
+    @GetMapping("/get-exam-by-course-id/{id}")
+    public Exam getExamByCourseId(@PathVariable Integer id){
+        return service.getExamByCourseId(id);
     }
 }
